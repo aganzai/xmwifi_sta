@@ -8,9 +8,11 @@ fi
 if [ "z""$NAME" == "z" ]; then        
 	NAME=centos
 fi
+rmmod mt7601Usta
 killall wpa_supplicant
 killall dhclient
 
+insmod ../driver/os/linux/mt7601Usta.ko
 wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i ra0 -B
 wpa_cli remove_network 0
 wpa_cli ap_scan 1
