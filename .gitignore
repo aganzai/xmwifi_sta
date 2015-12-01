@@ -1,0 +1,10 @@
+*.o
+*.cmd
+driver/tools/bin2h
+driver/os/linux/.tmp_versions/
+driver/os/linux/Makefile
+driver/os/linux/Module.symvers
+driver/os/linux/modules.order
+driver/os/linux/mt7601Usta.ko
+driver/os/linux/mt7601Usta.ko.unsigned
+driver/os/linux/mt7601Usta.mod.c

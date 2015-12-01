@@ -428,7 +428,7 @@ ifeq ($(OSABL),YES)
 endif
 else
 ifneq ($(findstring 7601,$(CHIPSET)),)
-	cp -f $(RT28xx_DIR)/os/linux/mt$(MODULE)sta.ko /tftpboot 2>/dev/null || :
+	echo cp -f $(RT28xx_DIR)/os/linux/mt$(MODULE)sta.ko /tftpboot 2>/dev/null || :
 else
 	cp -f $(RT28xx_DIR)/os/linux/rt$(MODULE)sta.ko /tftpboot 2>/dev/null || :
 endif
