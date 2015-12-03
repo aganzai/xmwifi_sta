@@ -6,7 +6,7 @@ if [ "z""$SSID" == "z" -o "z""$PSK" == "z" ]; then
 fi
 
 if [ "z""$NAME" == "z" ]; then        
-	NAME=centos
+	NAME=centos_XM
 fi
 rmmod mt7601Usta
 killall wpa_supplicant
@@ -21,4 +21,4 @@ wpa_cli set_network 0 ssid $SSID
 wpa_cli set_network 0 psk $PSK
 wpa_cli select_network 0
 wpa_cli list_networks
-dhclient ra0
+dhclient ra0 -H $NAME
