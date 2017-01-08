@@ -3,5 +3,6 @@
 
 1.driver 目录下编译出驱动
 make
+make install
 
 2.run 目录下运行
